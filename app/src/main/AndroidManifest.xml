@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bikehire">
+
+    <uses-sdk android:minSdkVersion="21" />
+
+    <queries>
+        <package android:name="com.google.android.apps.nbu.paisa.user" />
+        <package android:name="com.phonepe.app" />
+
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+        </intent>
+    </queries>
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.bluetooth" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/motorcycle"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BikeHire"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ChatBot"
+            android:parentActivityName=".UserDashboard"
+            android:exported="true" />
+        <activity
+            android:name=".ViewImage2"
+            android:exported="false" />
+        <activity
+            android:name=".ViewImage"
+            android:exported="false" />
+        <activity
+            android:name=".UserViewBikeDetails"
+            android:exported="true" />
+        <activity
+            android:name=".CompanyBookingStatus"
+            android:exported="false" />
+        <activity
+            android:name=".CompanyBookingReport"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="rzp.device_token.share" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@style/CheckoutTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <data
+                    android:host="rzp.io"
+                    android:scheme="io.rzp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PaymentReport"
+            android:exported="true" />
+        <activity
+            android:name=".BookingReport"
+            android:exported="true" />
+        <activity
+            android:name=".CompanyReport"
+            android:exported="true" />
+        <activity
+            android:name=".ReportDashboard"
+            android:exported="true" />
+        <activity
+            android:name=".UserGiveFeedback"
+            android:exported="true" />
+        <activity
+            android:name=".CompanyViewFeedback"
+            android:exported="true" />
+        <activity
+            android:name=".UserBookingStatus"
+            android:exported="true" />
+        <activity
+            android:name=".CompanyViewBooking"
+            android:exported="true" />
+        <activity
+            android:name=".UserViewBooking"
+            android:exported="true" />
+        <activity
+            android:name=".UserViewBikeCategory"
+            android:exported="true" />
+        <activity
+            android:name=".UserBikeBooking"
+            android:exported="true" />
+        <activity
+            android:name=".UserViewBike"
+            android:exported="true" />
+        <activity
+            android:name=".CompanyUpdateBike"
+            android:exported="true" />
+        <activity
+            android:name=".CompanyViewBike"
+            android:exported="true" />
+        <activity
+            android:name=".CompanyAddBike"
+            android:exported="true" />
+        <activity
+            android:name=".UserProfileUpdate"
+            android:exported="true" />
+        <activity
+            android:name=".UserProfile"
+            android:exported="true" />
+        <activity
+            android:name=".CompanyProfileUpdate"
+            android:exported="true" />
+        <activity
+            android:name=".CompanyProfile"
+            android:exported="true" />
+        <activity
+            android:name=".AdminViewCompany"
+            android:exported="true" />
+        <activity
+            android:name=".AdminCategory"
+            android:exported="true" />
+        <activity
+            android:name=".AdminUpdateCategory"
+            android:exported="true" />
+        <activity
+            android:name=".AdminAddCategory"
+            android:exported="true" />
+        <activity
+            android:name=".CompanyResetPassword"
+            android:exported="true"
+            android:parentActivityName=".CompanyForgetPassword" />
+        <activity
+            android:name=".CompanyForgetPassword"
+            android:exported="true"
+            android:parentActivityName=".CompanyLogin" />
+        <activity
+            android:name=".CompanyDashboard"
+            android:exported="true" />
+        <activity
+            android:name=".CompanyRegistration"
+            android:exported="true"
+            android:parentActivityName=".CompanyLogin" />
+        <activity
+            android:name=".CompanyLogin"
+            android:exported="true"
+            android:parentActivityName=".HomePage" />
+        <activity
+            android:name=".AdminResetPassword"
+            android:exported="true"
+            android:parentActivityName=".AdminForgetPassword" />
+        <activity
+            android:name=".AdminForgetPassword"
+            android:exported="true"
+            android:parentActivityName=".AdminLogin" />
+        <activity
+            android:name=".AdminLogin"
+            android:exported="true" />
+        <activity
+            android:name=".AdminDashboard"
+            android:exported="true" />
+        <activity
+            android:name=".UserResetPassword"
+            android:exported="true"
+            android:parentActivityName=".UserForgetPassword" />
+        <activity
+            android:name=".UserRegistration"
+            android:exported="true"
+            android:parentActivityName=".UserLogin" />
+        <activity
+            android:name=".UserLogin"
+            android:exported="true"
+            android:parentActivityName=".HomePage" />
+        <activity
+            android:name=".UserForgetPassword"
+            android:exported="true"
+            android:parentActivityName=".UserLogin" />
+        <activity
+            android:name=".UserDashboard"
+            android:exported="true" />
+        <activity
+            android:name=".HomePage"
+            android:exported="true" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_vAiWuvZz6RYBP2" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

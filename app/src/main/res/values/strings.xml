@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Bike Hire</string>
+    <string name="Open">open</string>
+    <string name="Close">close</string>
+
+    <string-array name="StartType">
+        <item>Self Start</item>
+        <item>Kick Start</item>
+    </string-array>
+
+    <string-array name="FuelType">
+        <item>Petrol</item>
+        <item>Diesel</item>
+        <item>Electric</item>
+    </string-array>
+</resources>

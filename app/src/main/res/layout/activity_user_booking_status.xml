@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserBookingStatus">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="#039BE5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rubik_bold"
+                    android:text="Track Booking"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/drop_shadow"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_layout" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="11dp"
+                android:fontFamily="@font/rubik_bold"
+                android:text="Booking Date"
+                android:textAllCaps="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="133dp"
+                android:layout_marginLeft="133dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:fontFamily="@font/rubik_bold"
+                android:text="Booking ID"
+                android:textAllCaps="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/textdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="160dp"
+                android:fontFamily="@font/rubik_bold"
+                android:text="55/55/4568"
+                app:layout_constraintEnd_toStartOf="@+id/textid"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:fontFamily="@font/rubik_bold"
+                android:text="55"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textdate"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <Button
+                android:id="@+id/invoice"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="280dp"
+                android:backgroundTint="@color/vivid"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Receipt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <View
+                android:id="@+id/view_divider"
+                android:layout_width="409dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textid" />
+
+            <TextView
+                android:id="@+id/textbkamt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="60dp"
+                android:fontFamily="@font/anton"
+                android:text="bbb "
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/textorderplaced"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_divider" />
+
+
+            <View
+                android:id="@+id/view_order_placed"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/shape_status_completed"
+                app:layout_constraintBottom_toBottomOf="@+id/orderplaced"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/orderplaced" />
+
+            <ImageView
+                android:id="@+id/orderplaced"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/bk_made"
+                app:layout_constraintStart_toEndOf="@+id/view_order_placed"
+                app:layout_constraintTop_toBottomOf="@+id/view_divider" />
+
+            <View
+                android:id="@+id/supporter_placed"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@+id/orderplaced"
+                app:layout_constraintEnd_toEndOf="@+id/orderplaced"
+                app:layout_constraintStart_toStartOf="@+id/orderplaced"
+                app:layout_constraintTop_toTopOf="@+id/orderplaced" />
+
+            <TextView
+                android:id="@+id/textorderplaced"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Booking Made"
+                android:textColor="@color/colorText"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/supporter_placed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/orderplaced" />
+
+            <TextView
+                android:id="@+id/placed_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="We have Recieved Your Booking!"
+                app:layout_constraintEnd_toEndOf="@id/textorderplaced"
+                app:layout_constraintStart_toStartOf="@+id/textorderplaced"
+                app:layout_constraintTop_toBottomOf="@+id/textorderplaced" />
+
+            <View
+                android:id="@+id/view_order_confirmed"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/shape_status_completed"
+                app:layout_constraintBottom_toBottomOf="@+id/img_orderconfirmed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/img_orderconfirmed" />
+
+            <ImageView
+                android:id="@+id/img_orderconfirmed"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/bk_confirm"
+                app:layout_constraintStart_toEndOf="@+id/view_order_confirmed"
+                app:layout_constraintTop_toBottomOf="@+id/orderplaced" />
+
+            <View
+                android:id="@+id/supporter_confirmed"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_orderconfirmed"
+                app:layout_constraintEnd_toEndOf="@+id/img_orderconfirmed"
+                app:layout_constraintStart_toStartOf="@+id/img_orderconfirmed"
+                app:layout_constraintTop_toTopOf="@+id/img_orderconfirmed" />
+
+            <TextView
+                android:id="@+id/text_confirmed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Booking Confirmed"
+                android:textColor="@color/colorText"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/supporter_confirmed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_orderconfirmed" />
+
+            <TextView
+                android:id="@+id/confirmed_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Your Booking has been Confirmed"
+                app:layout_constraintEnd_toEndOf="@id/text_confirmed"
+                app:layout_constraintStart_toStartOf="@+id/text_confirmed"
+                app:layout_constraintTop_toBottomOf="@+id/text_confirmed" />
+
+            <View
+                android:id="@+id/placed_divider"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toTopOf="@+id/view_order_confirmed"
+                app:layout_constraintEnd_toEndOf="@+id/view_order_placed"
+                app:layout_constraintStart_toStartOf="@+id/view_order_placed"
+                app:layout_constraintTop_toBottomOf="@id/view_order_placed" />
+
+            <View
+                android:id="@+id/view_order_processed"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/shape_status_completed"
+                app:layout_constraintBottom_toBottomOf="@+id/orderprocessed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/orderprocessed" />
+
+            <ImageView
+                android:id="@+id/orderprocessed"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/bk_complete"
+                app:layout_constraintStart_toEndOf="@+id/view_order_processed"
+                app:layout_constraintTop_toBottomOf="@+id/img_orderconfirmed" />
+
+            <View
+                android:id="@+id/supporter_processed"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@+id/orderprocessed"
+                app:layout_constraintEnd_toEndOf="@+id/orderprocessed"
+                app:layout_constraintStart_toStartOf="@+id/orderprocessed"
+                app:layout_constraintTop_toTopOf="@+id/orderprocessed" />
+
+            <TextView
+                android:id="@+id/textorderprocessed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Booking Completed"
+                android:textColor="@color/colorText"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/supporter_processed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/orderprocessed" />
+
+            <TextView
+                android:id="@+id/processed_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Booking has been Completed!"
+                app:layout_constraintEnd_toEndOf="@id/textorderprocessed"
+                app:layout_constraintStart_toStartOf="@+id/textorderprocessed"
+                app:layout_constraintTop_toBottomOf="@+id/textorderprocessed" />
+
+            <View
+                android:id="@+id/con_divider"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toTopOf="@+id/view_order_processed"
+                app:layout_constraintEnd_toEndOf="@+id/view_order_confirmed"
+                app:layout_constraintStart_toStartOf="@+id/view_order_confirmed"
+                app:layout_constraintTop_toBottomOf="@id/view_order_confirmed" />
+
+            <View
+                android:id="@+id/view_order_pickup"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/shape_status_current"
+                app:layout_constraintBottom_toBottomOf="@+id/orderpickup"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/orderpickup" />
+
+            <ImageView
+                android:id="@+id/orderpickup"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/bk_cancel"
+                app:layout_constraintStart_toEndOf="@+id/view_order_pickup"
+                app:layout_constraintTop_toBottomOf="@+id/orderprocessed" />
+
+            <View
+
+                android:id="@+id/supporter_pickup"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@+id/orderpickup"
+                app:layout_constraintEnd_toEndOf="@+id/orderpickup"
+                app:layout_constraintStart_toStartOf="@+id/orderpickup"
+                app:layout_constraintTop_toTopOf="@+id/orderpickup" />
+
+            <TextView
+                android:id="@+id/textorderpickup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Booking Cancelled"
+                android:textColor="@color/colorText"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/supporter_pickup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/orderpickup" />
+
+            <TextView
+                android:id="@+id/pickup_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:text="Your Booking has been cancelled"
+                app:layout_constraintEnd_toEndOf="@id/textorderpickup"
+                app:layout_constraintStart_toStartOf="@+id/textorderpickup"
+                app:layout_constraintTop_toBottomOf="@+id/textorderpickup" />
+
+            <View
+                android:id="@+id/ready_divider"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:alpha="0.5"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toTopOf="@+id/view_order_pickup"
+                app:layout_constraintEnd_toEndOf="@+id/view_order_processed"
+                app:layout_constraintStart_toStartOf="@+id/view_order_processed"
+                app:layout_constraintTop_toBottomOf="@id/view_order_processed" />
+
+
+            <TextView
+                android:id="@+id/shippingaddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="245dp"
+                android:layout_marginBottom="10dp"
+                android:text="Shipping Address"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/processed_desc"
+                app:layout_constraintVertical_bias="0.145" />
+
+            <EditText
+                android:id="@+id/changeshippingaddress"
+                android:layout_width="285dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginBottom="30dp"
+                android:ems="10"
+                android:hint="Shipping Address"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.166"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shippingaddress"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <Button
+                android:id="@+id/updateaddress"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="153dp"
+                android:layout_marginBottom="68dp"
+                android:backgroundTint="@color/lightgreen"
+                android:text="Change"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/changeshippingaddress"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <Button
+                android:id="@+id/cancelorder"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="245dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="51dp"
+                android:backgroundTint="@color/lightred"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Cancel Booking"
+                app:layout_constraintBottom_toTopOf="@+id/changeshippingaddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pickup_desc"
+                app:layout_constraintVertical_bias="0.061" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:padding="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/updateaddress"
+                app:layout_constraintVertical_bias="0.054">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputlayout1"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Delivery Date"
+                    android:paddingBottom="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/updatebooking_deliverydate1"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:ems="10"
+                        android:focusable="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputlayout2"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginLeft="190dp"
+                    android:layout_marginTop="40dp"
+                    android:hint="Return Date"
+                    android:paddingBottom="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/updatebooking_returndate1"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:ems="10"
+                        android:focusable="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputlayout3"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="110dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Delivery Time"
+                    android:paddingBottom="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/updatebooking_deliverytime1"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:ems="10"
+                        android:focusable="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputlayout4"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginLeft="190dp"
+                    android:layout_marginTop="110dp"
+                    android:hint="Return Time"
+                    android:paddingBottom="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/updatebooking_returntime1"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:ems="10"
+                        android:focusable="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/updatebooking_uploadDL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginLeft="75dp"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#6DB170"
+                    android:gravity="center_horizontal"
+                    android:text="Upload Driving License"
+                    android:textColor="#fff"
+                    app:backgroundTint="#F6C85B" />
+
+                <ImageView
+                    android:id="@+id/updatebooking_DLimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="260dp"
+                    android:layout_marginBottom="40dp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/updatebooking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginBottom="10dp"
+                android:background="#6DB170"
+                android:text="Update Booking"
+                android:textColor="#fff"
+                app:backgroundTint="#6DB170"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card1"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>
+
+

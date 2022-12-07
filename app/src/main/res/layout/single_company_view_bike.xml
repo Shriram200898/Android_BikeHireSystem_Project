@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="?android:dividerHorizontal"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/view_bimg"
+                    android:layout_width="100dp"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="20dp" />
+
+                <TextView
+                    android:id="@+id/view_bname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/view_bimg"
+                    android:includeFontPadding="false"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/view_bcate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_bname"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@id/view_bimg"
+                    android:includeFontPadding="false"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/view_brate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_bcate"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@id/view_bimg"
+                    android:includeFontPadding="false"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/view_bdeposit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_brate"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@id/view_bimg"
+                    android:includeFontPadding="false"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/view_bupdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/view_bimg"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#56CA5B"
+                    android:text="Update"
+                    android:textColor="@color/white"
+                    app:backgroundTint="#56CA5B" />
+
+                <Button
+                    android:id="@+id/view_bdelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/view_bimg"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/view_bupdate"
+                    android:background="#D14238"
+                    android:text="Delete"
+                    android:textColor="@color/white"
+                    app:backgroundTint="#D14238" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_below="@id/view_bdelete"
+                    android:layout_marginTop="20dp"
+                    android:background="#000000" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

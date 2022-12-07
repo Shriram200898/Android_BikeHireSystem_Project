@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserBookingStatus">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="#039BE5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rubik_bold"
+                    android:text="Track Booking"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/drop_shadow"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_layout" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="11dp"
+                android:fontFamily="@font/rubik_bold"
+                android:text="Booking Date"
+                android:textAllCaps="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="133dp"
+                android:layout_marginLeft="133dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:fontFamily="@font/rubik_bold"
+                android:text="Booking ID"
+                android:textAllCaps="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/company_txtdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="160dp"
+                android:fontFamily="@font/rubik_bold"
+                android:text="55/55/4568"
+                app:layout_constraintEnd_toStartOf="@+id/company_txtid"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/company_txtid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:fontFamily="@font/rubik_bold"
+                android:text="55"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/company_txtdate"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <View
+                android:id="@+id/view_divider"
+                android:layout_width="409dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/company_txtid" />
+
+
+            <TextView
+                android:id="@+id/textbkamt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginBottom="60dp"
+                android:fontFamily="@font/anton"
+                android:text="bbb "
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/company_bookingstatus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_divider"
+                app:layout_constraintVertical_bias="0.053" />
+
+
+<View
+        android:id="@+id/view_order_placed"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/shape_status_completed"
+        app:layout_constraintBottom_toBottomOf="@+id/orderplaced"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/orderplaced" />
+
+    <ImageView
+        android:id="@+id/orderplaced"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="190dp"
+        android:src="@drawable/bk_made"
+        app:layout_constraintStart_toEndOf="@+id/view_order_placed"
+        app:layout_constraintTop_toBottomOf="@+id/view_divider" />
+    <View
+        app:layout_constraintTop_toTopOf="@+id/orderplaced"
+        app:layout_constraintEnd_toEndOf="@+id/orderplaced"
+        app:layout_constraintStart_toStartOf="@+id/orderplaced"
+        app:layout_constraintBottom_toBottomOf="@+id/orderplaced"
+        android:id="@+id/supporter_placed"
+        android:layout_width="1dp"
+        android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/textorderplaced"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Booking Made"
+                android:textColor="@color/colorText"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/supporter_placed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/orderplaced" />
+
+            <TextView
+                android:id="@+id/placed_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="We have Recieved Your Booking!"
+                app:layout_constraintEnd_toEndOf="@id/textorderplaced"
+                app:layout_constraintStart_toStartOf="@+id/textorderplaced"
+                app:layout_constraintTop_toBottomOf="@+id/textorderplaced" />
+
+    <View
+        android:id="@+id/view_order_confirmed"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/shape_status_completed"
+        app:layout_constraintBottom_toBottomOf="@+id/img_orderconfirmed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_orderconfirmed" />
+    <ImageView
+        android:id="@+id/img_orderconfirmed"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/view_order_confirmed"
+        app:layout_constraintTop_toBottomOf="@+id/orderplaced"
+        android:src="@drawable/bk_confirm"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="20dp" />
+    <View
+        app:layout_constraintTop_toTopOf="@+id/img_orderconfirmed"
+        app:layout_constraintEnd_toEndOf="@+id/img_orderconfirmed"
+        app:layout_constraintStart_toStartOf="@+id/img_orderconfirmed"
+        app:layout_constraintBottom_toBottomOf="@+id/img_orderconfirmed"
+        android:id="@+id/supporter_confirmed"
+        android:layout_width="1dp"
+        android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/text_confirmed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Booking Confirmed"
+                android:textColor="@color/colorText"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/supporter_confirmed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_orderconfirmed" />
+
+            <TextView
+                android:id="@+id/confirmed_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Your Booking has been Confirmed"
+                app:layout_constraintEnd_toEndOf="@id/text_confirmed"
+                app:layout_constraintStart_toStartOf="@+id/text_confirmed"
+                app:layout_constraintTop_toBottomOf="@+id/text_confirmed" />
+
+    <View
+        android:id="@+id/placed_divider"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/view_order_confirmed"
+        app:layout_constraintEnd_toEndOf="@+id/view_order_placed"
+        app:layout_constraintStart_toStartOf="@+id/view_order_placed"
+        app:layout_constraintTop_toBottomOf="@id/view_order_placed" />
+    <View
+        android:id="@+id/view_order_processed"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/shape_status_completed"
+        app:layout_constraintBottom_toBottomOf="@+id/orderprocessed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/orderprocessed" />
+
+    <ImageView
+        android:id="@+id/orderprocessed"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/bk_complete"
+        app:layout_constraintStart_toEndOf="@+id/view_order_processed"
+        app:layout_constraintTop_toBottomOf="@+id/img_orderconfirmed" />
+    <View
+        app:layout_constraintTop_toTopOf="@+id/orderprocessed"
+        app:layout_constraintEnd_toEndOf="@+id/orderprocessed"
+        app:layout_constraintStart_toStartOf="@+id/orderprocessed"
+        app:layout_constraintBottom_toBottomOf="@+id/orderprocessed"
+        android:id="@+id/supporter_processed"
+        android:layout_width="1dp"
+        android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/textorderprocessed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Booking Completed"
+                android:textColor="@color/colorText"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/supporter_processed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/orderprocessed" />
+
+            <TextView
+                android:id="@+id/processed_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Booking has been Completed!"
+                app:layout_constraintEnd_toEndOf="@id/textorderprocessed"
+                app:layout_constraintStart_toStartOf="@+id/textorderprocessed"
+                app:layout_constraintTop_toBottomOf="@+id/textorderprocessed" />
+
+    <View
+        android:id="@+id/con_divider"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/view_order_processed"
+        app:layout_constraintEnd_toEndOf="@+id/view_order_confirmed"
+        app:layout_constraintStart_toStartOf="@+id/view_order_confirmed"
+        app:layout_constraintTop_toBottomOf="@id/view_order_confirmed" />
+    <View
+        android:id="@+id/view_order_pickup"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/shape_status_current"
+        app:layout_constraintBottom_toBottomOf="@+id/orderpickup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/orderpickup" />
+
+    <ImageView
+        android:id="@+id/orderpickup"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/bk_cancel"
+        app:layout_constraintStart_toEndOf="@+id/view_order_pickup"
+        app:layout_constraintTop_toBottomOf="@+id/orderprocessed" />
+    <View
+
+        app:layout_constraintTop_toTopOf="@+id/orderpickup"
+        app:layout_constraintEnd_toEndOf="@+id/orderpickup"
+        app:layout_constraintStart_toStartOf="@+id/orderpickup"
+        app:layout_constraintBottom_toBottomOf="@+id/orderpickup"
+        android:id="@+id/supporter_pickup"
+        android:layout_width="1dp"
+        android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/textorderpickup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Booking Cancelled"
+                android:textColor="@color/colorText"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/supporter_pickup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/orderpickup" />
+
+            <TextView
+                android:id="@+id/pickup_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:text="Your Booking has been cancelled"
+                app:layout_constraintEnd_toEndOf="@id/textorderpickup"
+                app:layout_constraintStart_toStartOf="@+id/textorderpickup"
+                app:layout_constraintTop_toBottomOf="@+id/textorderpickup" />
+
+    <View
+        android:id="@+id/ready_divider"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:alpha="0.5"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/view_order_pickup"
+        app:layout_constraintEnd_toEndOf="@+id/view_order_processed"
+        app:layout_constraintStart_toStartOf="@+id/view_order_processed"
+        app:layout_constraintTop_toBottomOf="@id/view_order_processed" />
+
+
+
+            <Button
+                android:id="@+id/company_cancelbooking"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="230dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="@color/red"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Cancel Booking"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pickup_desc" />
+
+
+            <ToggleButton
+                android:id="@+id/company_bookingstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="220dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_toggle1"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/white"
+                android:textOff="Update Status"
+                android:textOn="Booking Confirmed"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textbkamt1" />
+
+            <ToggleButton
+                android:id="@+id/company_bookingcomplete"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_toggle1"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/white"
+                android:textOff="Update to Complete"
+                android:textOn="Booking Completed"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textbkamt1" />
+
+
+            <Button
+                android:id="@+id/company_viewdl"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_weight="1"
+                android:background="#FFC107"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="View Driving License"
+                android:textColor="@color/white"
+                app:backgroundTint="#FFC107"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/company_cancelbooking" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="60dp"
+                android:padding="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/company_viewdl">
+
+
+                <Button
+                    android:id="@+id/takephoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#DFAA2D"
+                    android:text="Take Photo"
+                    android:textColor="#fff" />
+
+                <ImageView
+                    android:id="@+id/company_uploadproof"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginBottom="30dp" />
+
+                <Button
+                    android:id="@+id/update_deliveryproof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="420dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="#6DB170"
+                    android:gravity="center_horizontal"
+                    android:text="Upload Delivery Proof"
+                    android:textColor="#fff"
+                    app:backgroundTint="#6DB170" />
+
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>
+
+

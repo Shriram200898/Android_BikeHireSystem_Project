@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="?android:dividerHorizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/continuebooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/viewbike_img"
+                    android:layout_width="120dp"
+                    android:layout_height="110dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/viewbooking_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/viewbike_img"
+                    android:includeFontPadding="false"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/viewbike_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewbooking_date"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@id/viewbike_img"
+                    android:includeFontPadding="false"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/viewbike_compname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewbike_name"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@id/viewbike_img"
+                    android:includeFontPadding="false"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/viewbike_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewbike_compname"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@id/viewbike_img"
+                    android:includeFontPadding="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/viewbike_noofdays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewbike_date"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@id/viewbike_img"
+                    android:includeFontPadding="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/viewbike_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewbike_noofdays"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@id/viewbike_img"
+                    android:includeFontPadding="false"
+                    android:textSize="16sp" />
+
+
+                <Button
+                    android:id="@+id/give_feedbackbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/viewbike_amount"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/viewbike_img"
+                    android:layout_weight="1"
+                    android:background="#FFC107"
+                    android:cursorVisible="false"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Give Feedback"
+                    android:textColor="@color/white"
+                    android:visibility="visible"
+                    app:backgroundTint="#FFC107" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_below="@id/give_feedbackbtn"
+                    android:layout_marginTop="15dp"
+                    android:background="#000000" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

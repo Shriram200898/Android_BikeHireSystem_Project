@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <item  android:id="@+id/item1"
+        android:title="Home"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_menu_home"/>
+    <item
+        android:id="@+id/item2"
+        android:title="LogOut"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/help"
+        android:title="Help"
+        app:showAsAction="withText" />
+</menu>

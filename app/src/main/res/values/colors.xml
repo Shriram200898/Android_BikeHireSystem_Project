@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="colorPrimary">#7688EF</color>
+
+    <!--   a darker variant of the primary color, used for
+           the status bar (on Android 5.0+) and contextual app bars -->
+    <color name="colorPrimaryDark">#6876D6</color>
+
+    <!--   a secondary color for controls like checkboxes and text fields -->
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#ff0000</color>
+    <color name="lightred">#F46461</color>
+    <color name="green">#00ff00</color>
+    <color name="lightgreen">#A6E367</color>
+    <color name="spinner_base_color">#000</color>
+    <color name="spinner_hint_text_color">#000</color>
+    <color name="vivid">#FFFF9800</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorText">#000111</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="backcolor">#13253D</color>
+    <color name="bot_back_color">#283757</color>
+    <color name="user_back_color">#6965FF</color>
+    <color name="fab_color">#6B6AFF</color>
+
+</resources>
